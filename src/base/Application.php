@@ -156,7 +156,7 @@ class Application
         {
             $content = $exc->getExceptionStack();
         }
-
+        $content = $this->content;
         ob_start();
         include $this->getLayout();
         $content = ob_get_clean();
